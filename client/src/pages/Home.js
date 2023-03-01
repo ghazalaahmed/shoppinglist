@@ -4,7 +4,7 @@ const Home = () => {
   
   return (
     <div className="card bg-white card-rounded w-50">
-      HOME
+      This is the Homepage in client/src/pages/Home.js
     </div>
   );
 };
