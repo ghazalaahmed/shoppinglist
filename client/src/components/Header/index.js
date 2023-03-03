@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+
 
 import Auth from "../../utils/auth";
 
@@ -9,9 +12,12 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header>
-      <h4>This is a header (including the buttons Home, List, Login, and Signup) in client/src/components/Header/index.js</h4>
-      <div>
+    <Navbar bg="light" expand="lg">
+      <Container> 
+        <Navbar.Brand><Link to="/">Home Page</Link>  </Navbar.Brand>
+        <Navbar.Toggle />
+      <Navbar.Collapse className="justify-content-end">
+        <Navbar.Text> 
         {Auth.loggedIn() ? (
           <>
             <span>Hey there, {Auth.getProfile().data.username}!</span>
@@ -21,22 +27,22 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link className="btn btn-lg btn-light m-2" to="/">
-              Home
-            </Link>
-            <Link className="btn btn-lg btn-light m-2" to="/list">
+            <Link to="/list">
               List
             </Link>
-            <Link className="btn btn-lg btn-info m-2" to="/login">
+            <Link to="/login">
               Login
             </Link>
-            <Link className="btn btn-lg btn-light m-2" to="/signup">
+            <Link to="/signup">
               Signup
             </Link>
           </>
         )}
-      </div>
-    </header>
+        </Navbar.Text>
+      </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    
   );
 };
 
