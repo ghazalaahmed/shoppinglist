@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // const client = new ApolloClient({
@@ -57,6 +58,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/list" element={<List />} />
+            <Route path="/about" element={<About />} />
           </Routes>
 
           <Footer />
