@@ -7,12 +7,14 @@ import {
 import React from "react";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // const client = new ApolloClient({
 //   uri: '/graphql',
@@ -47,16 +49,16 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
+        <div className="flex-column justify-center align-center min-100-vh">
           <Header />
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/list" element={<List />} />
-            </Routes>
-          </div>
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/list" element={<List />} />
+          </Routes>
+
           <Footer />
         </div>
       </Router>
