@@ -10,9 +10,7 @@ const Footer = () => {
             <h6>Information</h6>
             <hr></hr>
             <p>
-              This is a test paragraph to see what it will look like. This is a
-              test paragraph to see what it will look like.This is a test
-              paragraph to see what it will look like.
+              This page will help you organize your crazy life. Sign up and start organizing a shopping list today!
             </p>
           </Col>
           <Col md={4}>
@@ -21,11 +19,6 @@ const Footer = () => {
             <div>
               <Link className="link" to="/">
                 Home
-              </Link>
-            </div>
-            <div>
-              <Link className="link" to="">
-                About
               </Link>
             </div>
             <div>

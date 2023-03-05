@@ -27,24 +27,21 @@ const Header = () => {
           >
             <Nav>
               <Nav.Link>
-                <Link className=" link link-navbar" to="/list">
-                  My List
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link className="link link-navbar" to="/login">
-                  About
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
                 {Auth.loggedIn() ? (
                   <>
-                    <p onClick={logout}>Logout</p>
+                    <Link className=" link link-navbar" to="/list">
+                      My List
+                    </Link>
+                    <Link className=" link link-navbar" onClick={logout}>Logout</Link>
                   </>
                 ) : (
                   <>
                     <Link className="link link-navbar" to="/signup">
                       Signup
+                    </Link>
+
+                    <Link className="link link-navbar" to="/login">
+                      Login
                     </Link>
                   </>
                 )}

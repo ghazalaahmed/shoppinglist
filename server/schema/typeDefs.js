@@ -24,6 +24,13 @@ const typeDefs = gql`
     createdAt: String
   }
 
+  type Item {
+    _id: ID
+    itemText: String
+    itemAuthor: String
+    isCollected: Boolean
+  }
+
   type Auth {
     token: ID!
     user: User
