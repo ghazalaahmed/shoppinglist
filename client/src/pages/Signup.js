@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -15,35 +15,35 @@ const Signup = () => {
     email: '',
     password: '',
   });
-//   const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
-//   const handleChange = (event) => { 
-//     const { name, value } = event.target;
+  const handleChange = (event) => { 
+    const { name, value } = event.target;
 
-//     setFormState({
-//       ...formState,
-//       [name]: value,
-//     });
-//   };
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-//     console.log(formState);
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
 
-//     try {
-//       const data  = await addUser({
-//         variables: { 
-//           username: formState.username, 
-//           email: formState.email, 
-//           password: formState.password 
-//         },
-//       });
-// console.log(data);
-//       Auth.login(data.addUser.token);
-//     } catch (e) {
-//       console.error("hello world", e);
-//     }
-//   };
+    try {
+      const data  = await addUser({
+        variables: { 
+          username: formState.username, 
+          email: formState.email, 
+          password: formState.password 
+        },
+      });
+console.log(data);
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error("hello world", e);
+    }
+  };
     return (
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
