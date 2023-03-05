@@ -1,0 +1,21 @@
+.beige {
+    background-color: beige;
+  }
+  
+  .link-navbar {
+    margin-left: 3em;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  .greige {
+    background-color: #b7ab9f;
+  }
+  
+  .jumbotron {
+    min-height: 80vh;
+    background-image: url(../src/images/cart.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
