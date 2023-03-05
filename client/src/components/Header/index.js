@@ -27,11 +27,11 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link to="/list">
-              List
+            <Link to="/Mylist">
+              Mylist
             </Link>
-            <Link to="/login">
-              Login
+            <Link to="/About">
+              About
             </Link>
             <Link to="/signup">
               Signup
