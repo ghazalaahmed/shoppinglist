@@ -9,18 +9,19 @@ db.once('open', async () => {
     await User.deleteMany({});
 
     await User.create(userSeeds);
+    await Item.create(itemSeeds);
 
-    for (let i = 0; i < itemSeeds.length; i++) {
-      const { _id, itemAuthor } = await Item.create(itemSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: itemAuthor },
-        {
-          $addToSet: {
-            items: _id,
-          },
-        }
-      );
-    }
+    // for (let i = 0; i < itemSeeds.length; i++) {
+    //   const { _id, itemAuthor } = await Item.create(itemSeeds[i]);
+    //   const user = await User.findOneAndUpdate(
+    //     { username: itemAuthor },
+    //     {
+    //       $addToSet: {
+    //         items: _id,
+    //       },
+    //     }
+    //   );
+    // }
   } catch (err) {
     console.error(err);
     process.exit(1);
