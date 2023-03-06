@@ -5,13 +5,13 @@ import { useQuery } from '@apollo/client';
 // import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap/Form";
 
-const ShoppingList = (items) => {
+const ShoppingList = () => {
     const { data } = useQuery(QUERY_ITEMS);
-    console.log(data);
-  if (!items.length) {
-    return <p>Nothing in your shopping list yet!</p>;
-  }
-
+    const items = data?.items || [];
+//   if (!items.length) {
+//     return <p>Nothing in your shopping list yet!</p>;
+//   }
+console.log(items);
   return (
     <>
     <p>This is a shopping list return</p>
