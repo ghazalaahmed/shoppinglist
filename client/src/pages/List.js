@@ -10,7 +10,9 @@ const List = () => {
       <InputGroup className="mb-3">
         <InputGroup.Checkbox />
         <Form.Control placeholder="Spinach" disabled />
-        <Button variant="outline-secondary" id="button-addon1">
+        <Button variant="outline-secondary" id="button-addon1" onClick={() => {
+        alert('WARNING: Removing!!r')}}>
+
           Delete Item
         </Button>
       </InputGroup>
@@ -24,13 +26,13 @@ const List = () => {
       <InputGroup className="mb-3">
         <InputGroup.Checkbox />
         <Form.Control placeholder="Bacon" disabled />
-        <Button variant="outline-secondary" id="button-addon1">
+        <Button variant="outline-secondary" id="button-addon2">
           Delete Item
         </Button>
       </InputGroup>
       <InputGroup className="mb-3">
         <Form.Control />
-        <Button variant="outline-secondary" id="button-addon1">
+        <Button variant="outline-secondary" id="button-addon3">
           Add Item
         </Button>
       </InputGroup>
