@@ -85,6 +85,9 @@ const resolvers = {
     removeItem: async (parent, { itemId }) => {
       return Item.findOneAndDelete({_id: itemId });
     },
+    // updateItem: async (parent, { itemId, isCollected }) => {
+    //   return Item.findOneAndUpdate({ _id: itemId, isCollected: isCollected });
+    // }
   },
 };
 
