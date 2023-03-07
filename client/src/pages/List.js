@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_ITEM } from '../utils/mutations';
-import { QUERY_ITEMS, QUERY_ME } from "../utils/queries";
+import { QUERY_ITEMS } from "../utils/queries";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -29,17 +29,18 @@ const List = () => {
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME });
-      cache.writeQuery({
-        query: QUERY_ME,
-        data: { me: { ...me, items: [...me.items, addItem] } },
-      });
+      // const { me } = cache.readQuery({ query: QUERY_ME });
+      // cache.writeQuery({
+      //   query: QUERY_ME,
+      //   data: { me: { ...me, items: [...me.items, addItem] } },
+      // });
     },
   });
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(itemText, Auth.getProfile().data.username);
       const { data } = await addItem({
         variables: {
           itemText,
@@ -74,7 +75,6 @@ const List = () => {
             <Form.Control placeholder="Spinach" disabled />
             <Button variant="outline-secondary" id="button-addon1" onClick={() => {
         alert('WARNING: Removing!!r')}}>
->
               Delete Item
             </Button>
           </InputGroup>

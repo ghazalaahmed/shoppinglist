@@ -50,3 +50,18 @@ export const ADD_ITEM = gql`
     }
   }
 `;
+
+export const REMOVE_ITEM = gql`
+mutation removeItem(
+  $itemId: ID!
+   ) {
+  removeItem(
+    itemId: $itemId
+    ) {
+    _id
+    itemText
+    itemAuthor
+    isCollected
+  }
+}
+`;
