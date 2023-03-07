@@ -6,38 +6,44 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container-fluid beige pb-5">
-      <div className="jumbotron"></div>
+    <div className="container-fluid beige px-0 pb-5">
+      <div className="col-md-12 mb-4 playFair text-center">
+        <h3>Never forget what to get</h3>
+      </div>
+      <div className="jumbotron">
+        <img
+          src="../images/cart.jpg"
+          class="object-fit-cover"
+          alt="shopping cart"
+        ></img>
+      </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-12 mb-4 text-center">
-            <h3>Never forget what to get</h3>
-          </div>
           <div className="col-md-4">
-            <div className="card">
-              <img src="" className="w-100" alt=""></img>
+            <div className="card shadow-lg">
+              <img src="" className="w-100 cardPic" alt=""></img>
               <div className="card-body">
                 <h1>test</h1>
               </div>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card">
-              <img src="" className="w-100" alt=""></img>
+            <div className="card shadow-lg">
+              <img src="" className="w-100 cardPic" alt=""></img>
               <div className="card-body">
                 <h1>test</h1>
               </div>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card">
-              <img src="" className="w-100" alt=""></img>
+            <div className="card shadow-lg">
+              <img src="" className="w-100 cardPic" alt=""></img>
               <div className="card-body">
                 <h1>test</h1>
               </div>
             </div>
           </div>
-          <div className="col-md-12 mb-4 text-center">
+          <div className="col-md-12 my-4 text-center">
             <button>
               <Link className="link" to="/signup">
                 Sign Up Now!
