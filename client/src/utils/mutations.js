@@ -65,3 +65,19 @@ mutation removeItem(
   }
 }
 `;
+
+// export const UPDATE_ITEM = gql`
+// mutation updateItem(
+//   $isCollected: Boolean
+//   ) {
+//     updateItem(
+//       isCollected: $isCollected
+//     ) {
+//       _id 
+//       itemText 
+//       itemAuthor 
+//       isCollected
+//     }
+//   }
+// )
+// `;

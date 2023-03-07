@@ -1,22 +1,27 @@
 [
   {
     "itemText": "Spinach",
-    "itemAuthor": "pizza"
+    "itemAuthor": "pizza",
+    "isCollected": false
   },
   {
     "itemText": "Peanut Butter",
-    "itemAuthor": "pizza"
+    "itemAuthor": "pizza",
+    "isCollected": false
   },
   {
     "itemText": "Bacon",
-    "itemAuthor": "pizza"
+    "itemAuthor": "pizza",
+    "isCollected": true
   },
   {
     "itemText": "Stew",
-    "itemAuthor": "pizza"
+    "itemAuthor": "pizza",
+    "isCollected": false
   },
   {
     "itemText": "My Dignity",
-    "itemAuthor": "pizza"
+    "itemAuthor": "pizza",
+    "isCollected": false
   }
 ]

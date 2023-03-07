@@ -1,6 +1,6 @@
 import React from "react";
 import { QUERY_ITEMS } from '../../utils/queries';
-import { REMOVE_ITEM } from '../../utils/mutations';
+import { REMOVE_ITEM, UPDATE_ITEM } from '../../utils/mutations';
 import { useQuery } from '@apollo/client';
 import { useMutation } from '@apollo/client';
 import InputGroup from "react-bootstrap/InputGroup";
@@ -10,6 +10,21 @@ import Form from "react-bootstrap/Form";
 const ShoppingList = () => {
     const { data } = useQuery(QUERY_ITEMS);
     const items = data?.items || [];
+
+    // const [updateItem] = useMutation(UPDATE_ITEM, {
+    //   update(cache, {data: { updateItem } }) {
+    //     try {
+    //       const { items } = cache.readQuery({ query: QUERY_ITEMS });
+
+    //       cache.writeQuery({
+    //         query: QUERY_ITEMS,
+    //         data: { items: [...items.filter(item => item._id !== updateItem._id)] },
+    //       });
+    //     } catch (e) {
+    //       console.error(e);
+    //     }
+    //   }
+    // });
 
     const [removeItem] = useMutation(REMOVE_ITEM, {
       update(cache, {data: { removeItem } }) {
@@ -40,9 +55,10 @@ const ShoppingList = () => {
       }
     };
 
-//   if (!items.length) {
-//     return <p>Nothing in your shopping list yet!</p>;
-//   }
+  if (!items.length) {
+    return <p>Nothing in your shopping list yet!</p>;
+  }
+
 console.log(items);
   return (
     <>
@@ -50,8 +66,8 @@ console.log(items);
       console.log("item is ",item)
       return(
         <InputGroup className="mb-3">
-        <InputGroup.Checkbox />
-        <Form.Control placeholder={item.itemText} disabled />
+        <InputGroup.Checkbox checked={item.isCollected} />
+        <Form.Control value={item.itemText} disabled />
         <Button 
         value={item._id}
         variant="outline-secondary" 
