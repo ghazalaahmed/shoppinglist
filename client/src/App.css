@@ -1,21 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display&display=swap");
+
 .beige {
-    background-color: beige;
-  }
-  
-  .link-navbar {
-    margin-left: 3em;
-  }
-  
-  .link {
-    text-decoration: none;
-  }
-  .greige {
-    background-color: #b7ab9f;
-  }
-  
-  .jumbotron {
-    min-height: 80vh;
-    background-image: url(../src/images/cart.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  background-color: beige;
+}
+.hrFooter {
+  border-top: 3px solid beige;
+  margin-top: 0.5em;
+}
+
+.hrNav {
+  border-top: 1px solid #b7ab9f;
+  border-bottom: 1px solid #fff;
+}
+.hrNav:after {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  border-top: 1px solid #b7ab9f;
+  border-bottom: 1px solid #fff;
+}
+
+.fLink {
+  text-decoration: none;
+}
+.link {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: rgb(120, 111, 103);
+  transition: 50ms;
+}
+.link:hover {
+  color: rgb(185, 169, 156);
+}
+.greige {
+  background-color: #b7ab9f;
+}
+
+.jumbotron {
+  min-height: 80vh;
+}
+
+.playFair {
+  font-family: "Playfair Display", serif;
+  font-weight: bolder;
+}
+.fauna {
+  font-family: "Fauna One", serif;
+}
+
+.cardPic {
+  height: 5em;
+}
+
+.card-body {
+  background-color: #b7ab9f;
+}
+
+.mainSignUp {
+  height: 50vh;
+}
