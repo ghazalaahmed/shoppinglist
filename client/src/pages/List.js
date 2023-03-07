@@ -64,6 +64,7 @@ const List = () => {
   };
 
   return (
+
     <div>
       {Auth.loggedIn() ? (
         <>
@@ -71,7 +72,9 @@ const List = () => {
           <InputGroup className="mb-3">
             <InputGroup.Checkbox />
             <Form.Control placeholder="Spinach" disabled />
-            <Button variant="outline-secondary" id="button-addon1">
+            <Button variant="outline-secondary" id="button-addon1" onClick={() => {
+        alert('WARNING: Removing!!r')}}>
+>
               Delete Item
             </Button>
           </InputGroup>
@@ -125,6 +128,7 @@ const List = () => {
         </p>
       )}
     </div>
+
   );
 };
 
