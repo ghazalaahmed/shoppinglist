@@ -109,9 +109,45 @@ body {
   background-position: center;
 }
 
-.cardPic1{
+.cardPic1 {
   background-image: url(./images/checkout.jpg);
   height: 19em;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.cardPic2 {
+  background-image: url(./images/check.jpg);
+  height: 19em;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cardPic3 {
+  background-image: url(./images/fridge.jpg);
+  height: 19em;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-body {
+  height: 9em;
+}
+
+.card-body > p {
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  letter-spacing: -1px;
+}
+
+.button2 {
+  padding: 0.5em 1em;
+  border-radius: 10px 10px 10px 10px;
+  
+  
+}
+
+.button2Link {
+  text-decoration: none;
+  color: rgb(67, 62, 58);
+  font-size: 2em;
+}
+
