@@ -26,6 +26,21 @@ const ShoppingList = () => {
     //   }
     // });
 
+    // const handleCheckbox = async (event, value) => {
+    //   event.preventDefault();
+    //   try {
+    //     const { data } = await updateItem({
+    //       variables: {
+    //         itemId: value,
+    //         isCollected: Boolean,
+    //       }
+    //     });
+    //     console.log(data);
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // };
+
     const [removeItem] = useMutation(REMOVE_ITEM, {
       update(cache, {data: { removeItem } }) {
         try {
@@ -49,7 +64,6 @@ const ShoppingList = () => {
             itemId: value,
           }
         });
-        console.log(data);
       } catch (err) {
         console.error(err);
       }
@@ -59,14 +73,15 @@ const ShoppingList = () => {
     return <p>Nothing in your shopping list yet!</p>;
   }
 
-console.log(items);
   return (
     <>
     {items && items.map((item) => {
-      console.log("item is ",item)
       return(
         <InputGroup className="mb-3">
-        <InputGroup.Checkbox checked={item.isCollected} />
+        <InputGroup.Checkbox 
+        // checked={item.isCollected} 
+        // onClick={(e) => handleCheckbox(e, item._id)} 
+        />
         <Form.Control value={item.itemText} disabled />
         <Button 
         value={item._id}
