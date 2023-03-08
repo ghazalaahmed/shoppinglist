@@ -14,15 +14,18 @@ const Header = () => {
     <div className="beige">
       <Container className="pb-3">
         <Row className="justify-content-md-center px-4 px-md-0">
-          <Col  lg="8">
+          <Col lg="8">
             <Navbar collapseOnSelect expand="lg" className="pt-5 pb-1 pb-lg-3">
               <Navbar.Brand>
-                <Link className="link display-6" to="/">
-                  Shopping List
+                <Link className="brand display-6" to="/">
+                  cataLIST
                 </Link>
               </Navbar.Brand>
 
-              <Navbar.Toggle className="bg-light" aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle
+                className="bg-light"
+                aria-controls="basic-navbar-nav"
+              />
               <Navbar.Collapse
                 className="justify-content-end fauna"
                 id="basic-navbar-nav"
@@ -31,12 +34,12 @@ const Header = () => {
                   {Auth.loggedIn() ? (
                     <>
                       <Nav.Link>
-                        <Link className="link ps-lg-3" to="/list">
+                        <Link className="navLink ps-lg-3" to="/list">
                           My List
                         </Link>
                       </Nav.Link>
                       <Nav.Link>
-                        <Link className="link ps-lg-3" onClick={logout}>
+                        <Link className="navLink  ps-lg-3" onClick={logout}>
                           Logout
                         </Link>
                       </Nav.Link>
@@ -44,13 +47,13 @@ const Header = () => {
                   ) : (
                     <>
                       <Nav.Link>
-                        <Link className="link ps-lg-3" to="/signup">
-                          Signup
+                        <Link className="navLink" to="/signup">
+                          SIGNUP
                         </Link>
                       </Nav.Link>
                       <Nav.Link>
-                        <Link className="link ps-lg-5" to="/login">
-                          Login
+                        <Link className="navLink ms-lg-3 " to="/login">
+                          LOGIN
                         </Link>
                       </Nav.Link>
                     </>

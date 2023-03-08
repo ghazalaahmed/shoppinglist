@@ -3,27 +3,29 @@ import { Link } from "react-router-dom";
 // import Button from "react-bootstrap/Button";
 // import Card from "react-bootstrap/Card";
 // import ListGroup from "react-bootstrap/ListGroup";
+import { Col, Row, Container } from "react-bootstrap";
+
 
 const Home = () => {
   return (
     <div className="container-fluid beige px-0 pb-5">
-      <div className="col-md-12 mb-4 playFair text-center">
-        <h3>Never forget what to get</h3>
+      <div className="col-md-12  displayBox text-center">
+        <h2 className="never playFair">Never Forget <br></br> What To Get</h2>
       </div>
-      <div className="jumbotron">
-        <img
-          src="../images/cart.jpg"
-          class="object-fit-cover"
-          alt="shopping cart"
-        ></img>
-      </div>
-      <div className="container">
+      <Container className=" p-0 mb-5">
+        <Row className="justify-content-center ">
+          <Col md="8" className="jumbotron"></Col>
+        </Row>
+      </Container>
+      <div className="container pt-5">
         <div className="row">
           <div className="col-md-4">
             <div className="card shadow-lg">
-              <img src="" className="w-100 cardPic" alt=""></img>
+              <div className="cardPic1">
+                
+              </div>
               <div className="card-body">
-                <h1>test</h1>
+                <p>No more multiple trips</p>
               </div>
             </div>
           </div>
@@ -53,25 +55,6 @@ const Home = () => {
         </div>
       </div>
     </div>
-    // <Card>
-    // <Card.Header> Never forget what to get</Card.Header>
-    // <Card.Body>
-    // <Card.Title> Shopping List
-    // </Card.Title>
-    // <Card.Text>
-    // <ListGroup className="list-group-flush">
-    //     <ListGroup.Item>Can't remember what you came for?</ListGroup.Item>
-    //     <ListGroup.Item>Keep track of what to buy</ListGroup.Item>
-    //     <ListGroup.Item>Always come home with what you need</ListGroup.Item>
-    //   </ListGroup>
-
-    // </Card.Text>
-    // <Button variant="primary"> Signup Now</Button>
-    // </Card.Body>
-    // </Card>
-    // <div className="card bg-white card-rounded w-50">
-    //   This is the Homepage in client/src/pages/Home.js
-    // </div>
   );
 };
 

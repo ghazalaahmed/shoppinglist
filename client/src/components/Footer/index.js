@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Stack } from "react-bootstrap";
+
 const Footer = () => {
   return (
     <section className="greige footer pb-5 pt-4">
