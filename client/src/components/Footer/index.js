@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Stack } from "react-bootstrap";
+import ghIcon from '../../images/github.svg';
+import envelope from '../../images/envelope.svg';
 
 const Footer = () => {
   return (
@@ -32,9 +34,24 @@ const Footer = () => {
             <h5 className="playFair mb-0 pb-0">CONTACT</h5>
             <hr className="hrFooter"></hr>
             <Stack gap={1}>
-              <p className="playFair">Ben</p>
-              <p className="playFair">Darren</p>
-              <p className="playFair">Ghazala</p>
+            <p className="playFair">
+                Ben&nbsp;
+                <Link to="https://github.com/Hostile131"><img alt='GitHub Icon' src={ghIcon}></img>
+                </Link><>&nbsp;</>
+                <Link to="mailto:actuallysmart@yahoo.com"><img alt='Envelope Icon' src={envelope}></img></Link>
+              </p>
+              <p className="playFair">
+                Darren&nbsp;
+                <Link to="https://github.com/dmilleza"><img alt='GitHub Icon' src={ghIcon}></img>
+                </Link><>&nbsp;</>
+                <Link to="mailto:darrenmilleza@gmail.com"><img alt='Envelope Icon' src={envelope}></img></Link>
+              </p>
+              <p className="playFair">
+                Ghazala&nbsp;
+                <Link to="https://github.com/ghazalaahmed"><img alt='GitHub Icon' src={ghIcon}></img>
+                </Link><>&nbsp;</>
+                <Link to="mailto:ghazala599@gmail.com"><img alt='Envelope Icon' src={envelope}></img></Link>
+              </p>
             </Stack>
           </Col>
         </Row>
