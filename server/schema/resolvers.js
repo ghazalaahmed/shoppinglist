@@ -17,6 +17,9 @@ const resolvers = {
     thought: async (parent, { thoughtId }) => {
       return Thought.findOne({ _id: thoughtId });
     },
+    items: async (parent) => {
+      return Item.find();
+    }
   },
 
   Mutation: {
@@ -42,6 +45,10 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addItem: async (parent, { itemText, itemAuthor }) => {
+      const item = await Item.create({ itemText, itemAuthor, isCollected: false });
+      return item;
     },
     addThought: async (parent, { thoughtText, thoughtAuthor }) => {
       const thought = await Thought.create({ thoughtText, thoughtAuthor });
@@ -75,6 +82,12 @@ const resolvers = {
         { new: true }
       );
     },
+    removeItem: async (parent, { itemId }) => {
+      return Item.findOneAndDelete({_id: itemId });
+    },
+    // updateItem: async (parent, { itemId, isCollected }) => {
+    //   return Item.findOneAndUpdate({ _id: itemId, isCollected: isCollected });
+    // }
   },
 };
 

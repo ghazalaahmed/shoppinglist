@@ -1,39 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Stack } from "react-bootstrap";
+
 const Footer = () => {
   return (
-    <section className="greige footer py-4">
+    <section className="greige footer pb-5 pt-4">
       <Container>
-        <Row>
-          <Col md={4}>
-            <h6>Information</h6>
-            <hr></hr>
-            <p>
-              This page will help you organize your crazy life. Sign up and start organizing a shopping list today!
+        <Row className="justify-content-md-around">
+          <Col md={3}>
+            <h5 className="playFair">INFORMATION</h5>
+            <hr className="hrFooter"></hr>
+            <p className="playFair">
+              This page will help you organize your crazy life. Sign up and
+              start organizing a shopping list today!
             </p>
           </Col>
-          <Col md={4}>
-            <h6>Quick Links</h6>
-            <hr></hr>
-            <div>
-              <Link className="link" to="/">
+          <Col md={3}>
+            <h5 className="playFair">QUICK LINKS</h5>
+            <hr className="hrFooter"></hr>
+            <Stack gap={2}>
+              <Link className="fLink playFair" to="/">
                 Home
               </Link>
-            </div>
-            <div>
-              <Link className="link" to="/List">
+
+              <Link className="fLink playFair" to="/List">
                 My List
               </Link>
-            </div>
+            </Stack>
           </Col>
-          <Col md={4}>
-            <h6>Contact</h6>
-            <hr></hr>
-            <Stack gap={3}>
-              <p>Ben</p>
-              <p>Darren</p>
-              <p>Ghazala</p>
+          <Col md={3}>
+            <h5 className="playFair mb-0 pb-0">CONTACT</h5>
+            <hr className="hrFooter"></hr>
+            <Stack gap={1}>
+              <p className="playFair">Ben</p>
+              <p className="playFair">Darren</p>
+              <p className="playFair">Ghazala</p>
             </Stack>
           </Col>
         </Row>

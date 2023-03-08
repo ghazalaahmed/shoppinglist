@@ -33,8 +33,16 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ITEM = gql`
-  mutation addItem($itemText: String!, $itemAuthor: String!) {
-    addItem(itemText: $itemText, itemAuthor: $itemAuthor) {
+  mutation addItem(
+    $itemText: String!,
+     $itemAuthor: String!, 
+     $isCollected: Boolean
+     ) {
+    addItem(
+      itemText: $itemText 
+      itemAuthor: $itemAuthor
+      isCollected: $isCollected
+      ) {
       _id
       itemText
       itemAuthor
@@ -42,3 +50,34 @@ export const ADD_ITEM = gql`
     }
   }
 `;
+
+export const REMOVE_ITEM = gql`
+mutation removeItem(
+  $itemId: ID!
+   ) {
+  removeItem(
+    itemId: $itemId
+    ) {
+    _id
+    itemText
+    itemAuthor
+    isCollected
+  }
+}
+`;
+
+// export const UPDATE_ITEM = gql`
+// mutation updateItem(
+//   $isCollected: Boolean
+//   ) {
+//     updateItem(
+//       isCollected: $isCollected
+//     ) {
+//       _id 
+//       itemText 
+//       itemAuthor 
+//       isCollected
+//     }
+//   }
+// )
+// `;

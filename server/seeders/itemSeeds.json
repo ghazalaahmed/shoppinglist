@@ -1,0 +1,27 @@
+[
+  {
+    "itemText": "Spinach",
+    "itemAuthor": "pizza",
+    "isCollected": false
+  },
+  {
+    "itemText": "Peanut Butter",
+    "itemAuthor": "pizza",
+    "isCollected": false
+  },
+  {
+    "itemText": "Bacon",
+    "itemAuthor": "pizza",
+    "isCollected": true
+  },
+  {
+    "itemText": "Stew",
+    "itemAuthor": "pizza",
+    "isCollected": false
+  },
+  {
+    "itemText": "My Dignity",
+    "itemAuthor": "pizza",
+    "isCollected": false
+  }
+]
