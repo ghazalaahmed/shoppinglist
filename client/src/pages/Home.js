@@ -14,10 +14,10 @@ const Home = () => {
       </div>
       <Container className=" p-0 mb-5">
         <Row className="justify-content-center ">
-          <Col md="8" className="jumbotron"></Col>
+          <Col lg="8" className="jumbotron"></Col>
         </Row>
       </Container>
-      <div className="container pt-5">
+      <div className="container pt-3">
         <div className="row">
           <div className="col-md-4">
             <div className="card shadow-lg">
@@ -31,23 +31,27 @@ const Home = () => {
           </div>
           <div className="col-md-4">
             <div className="card shadow-lg">
-              <img src="" className="w-100 cardPic" alt=""></img>
+              <div className="cardPic2">
+                
+              </div>
               <div className="card-body">
-                <h1>test</h1>
+                <p>Keep track on what to buy</p>
               </div>
             </div>
           </div>
           <div className="col-md-4">
             <div className="card shadow-lg">
-              <img src="" className="w-100 cardPic" alt=""></img>
+              <div className="cardPic3">
+                
+              </div>
               <div className="card-body">
-                <h1>test</h1>
+                <p>Always come home with what you need</p>
               </div>
             </div>
           </div>
-          <div className="col-md-12 my-4 text-center">
-            <button>
-              <Link className="link" to="/signup">
+          <div className="col-md-12 my-5 text-center">
+            <button className="button2">
+              <Link className="button2Link" to="/signup">
                 Sign Up Now!
               </Link>
             </button>
