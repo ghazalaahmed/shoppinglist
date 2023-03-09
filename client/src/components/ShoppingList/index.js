@@ -76,32 +76,29 @@ const ShoppingList = () => {
   }
 
   return (
-    <div >
-      <main className="greige">
-        {items &&
-          items.map((item) => {
-            return (
-              <div className="griege">
-                <InputGroup className="mb-5">
-                  <InputGroup.Checkbox
-                  // checked={item.isCollected}
-                  // onClick={(e) => handleCheckbox(e, item._id)}
-                  />
-                  <Form.Control value={item.itemText} disabled />
-                  <Button
-                    value={item._id}
-                    variant="outline-secondary"
-                    id="button-addon1"
-                    onClick={(e) => handleFormSubmit(e, item._id)}
-                  >
-                    Delete Item
-                  </Button>
-                </InputGroup>
-              </div>
-            );
-          })}
-      </main>
-    </div>
+    <>
+      {items &&
+        items.map((item) => {
+          return (
+            <InputGroup className="mb-3">
+              <InputGroup.Checkbox
+              // checked={item.isCollected}
+              // onClick={(e) => handleCheckbox(e, item._id)}
+              />
+              <Form.Control value={item.itemText} disabled />
+              <Button
+                value={item._id}
+                className="griegeB"
+                variant="outline-secondary"
+                id="button-addon1"
+                onClick={(e) => handleFormSubmit(e, item._id)}
+              >
+                Delete Item
+              </Button>
+            </InputGroup>
+          );
+        })}
+    </>
   );
 };
 

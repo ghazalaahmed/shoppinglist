@@ -117,6 +117,10 @@ body {
     0px -2px 10px rgba(255, 255, 255, 0.15); */
 }
 
+.griegeB{
+  color:#b7ab9f;
+}
+
 .cardPic0 {
   background-image: url(./images/cart.jpg);
   height: 19em;
@@ -148,7 +152,10 @@ body {
 .signCard{
   background-color: #b7ab9f;
   padding: 1em 3em 3em 1em;
+}
 
+.listPage{
+  height: 70vh;
 }
 .card-body > p {
   font-family: "Playfair Display", serif;
