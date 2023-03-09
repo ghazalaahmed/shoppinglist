@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-import { ADD_ITEM } from '../utils/mutations';
+import { ADD_ITEM } from "../utils/mutations";
 import { QUERY_ITEMS } from "../utils/queries";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
-import ShoppingList from '../components/ShoppingList';
+import ShoppingList from "../components/ShoppingList";
 
 import Auth from "../utils/auth";
+import { Container } from "react-bootstrap";
 
 const List = () => {
   const [itemText, setItemText] = useState("");
@@ -65,11 +66,11 @@ const List = () => {
   };
 
   return (
-
-    <div>
+    <div className="beige listPage">
+      <Container>
       {Auth.loggedIn() ? (
         <>
-        <ShoppingList />
+          <ShoppingList />
           <InputGroup className="mb-3">
             <Form.Control
               name="itemText"
@@ -85,11 +86,7 @@ const List = () => {
             >
               Add Item
             </Button>
-            {error && (
-              <div>
-                {error.message}
-              </div>
-            )}
+            {error && <div>{error.message}</div>}
           </InputGroup>
           <p
             className={`m-0 ${
@@ -100,11 +97,12 @@ const List = () => {
           </p>
         </>
       ) : (
-        <p>
+        <p >
           You need to be logged in to share your thoughts. Please{" "}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
+      </Container>
     </div>
 
   );
