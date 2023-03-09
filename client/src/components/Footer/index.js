@@ -9,7 +9,7 @@ const Footer = () => {
     <section className="greige footer pb-5 pt-4">
       <Container>
         <Row className="justify-content-md-around">
-          <Col md={3}>
+          <Col md={3} className="mb-3">
             <h5 className="playFair">INFORMATION</h5>
             <hr className="hrFooter"></hr>
             <p className="playFair">
@@ -17,7 +17,7 @@ const Footer = () => {
               start organizing a shopping list today!
             </p>
           </Col>
-          <Col md={3}>
+          <Col md={3} className="mb-3">
             <h5 className="playFair">QUICK LINKS</h5>
             <hr className="hrFooter"></hr>
             <Stack gap={2}>
@@ -30,7 +30,7 @@ const Footer = () => {
               </Link>
             </Stack>
           </Col>
-          <Col md={3}>
+          <Col md={3} className="">
             <h5 className="playFair mb-0 pb-0">CONTACT</h5>
             <hr className="hrFooter"></hr>
             <Stack gap={1}>

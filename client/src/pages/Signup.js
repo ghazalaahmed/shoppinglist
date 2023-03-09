@@ -44,15 +44,18 @@ const Signup = () => {
     }
   };
   return (
-    <main>
+    <main className="beige mainSignUp">
       {data ? (
-        <p>
-          Success! You may now <Link to="/login">login.</Link>
+        <p className="success playFair">
+          Success! You may now <Link className="navLink" to="/login">login.</Link>
         </p>
       ) : (
+        <div className="signCard rounded">
+          <h1 className="mb-2">Sign Up</h1>
+          <hr></hr>
         <Form onSubmit={handleFormSubmit}>
           <Form.Group className="mb-3" controlId="formBasicUsername">
-            <Form.Label>Username</Form.Label>
+            <Form.Label className="h2">Username</Form.Label>
             <Form.Control
               name="username"
               type="username"
@@ -62,7 +65,7 @@ const Signup = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label className="h2">Email address</Form.Label>
             <Form.Control
               name="email"
               type="email"
@@ -76,7 +79,7 @@ const Signup = () => {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="h2">Password</Form.Label>
             <Form.Control
               name="password"
               type="password"
@@ -89,6 +92,7 @@ const Signup = () => {
             Submit
           </Button>
         </Form>
+        </div>
       )}
       {error && (
         <div className="my-3 p-3 bg-danger text-white">{error.message}</div>

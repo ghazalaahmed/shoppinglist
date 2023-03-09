@@ -12,13 +12,14 @@ const Header = () => {
   };
   return (
     <div className="beige">
-      <Container className="pb-3">
+      <Container>
         <Row className="justify-content-md-center px-4 px-md-0">
           <Col lg="8">
             <Navbar collapseOnSelect expand="lg" className="pt-5 pb-1 pb-lg-3">
               <Navbar.Brand>
                 <Link className="brand display-6" to="/">
-                  cataLIST
+                  <span className="cata">cata</span>
+                  <span className="list">LIST</span>
                 </Link>
               </Navbar.Brand>
 
@@ -27,6 +28,7 @@ const Header = () => {
                 aria-controls="basic-navbar-nav"
               />
               <Navbar.Collapse
+        
                 className="justify-content-end fauna"
                 id="basic-navbar-nav"
               >
